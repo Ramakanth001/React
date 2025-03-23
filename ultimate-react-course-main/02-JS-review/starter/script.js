@@ -154,10 +154,12 @@ book;
 const {title, author, genres} = book;
 console.log(title);
 
+// Rest operator
 const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 genres;
 // console.log(otherGenres)
 
+// Spread operator
 const newGenres = [ 'joro', ...genres, 'comedy']
 // console.log(newGenres)
 
@@ -167,8 +169,9 @@ const updatedBook = { ...book, moviePublicationDate: "2001-12-19", pages: 1210 }
 const newBookWoo = {...book, review: 'Good',  hit: 'yes'};
 // console.log(newBookWoo)
 
-console.log(`I read a book named ${title}`)
 
+//Template Literal
+console.log(`I read a book named ${title}`)
 
 const pages = book.pages;
 
@@ -178,3 +181,7 @@ console.log(myReview);
 const pageRange = book.pages > 1000 ? `${book.title} has greater than 1000 pages` : `${book.title} has less than or equal to 1000 pages`;
 
 console.log(pageRange);
+
+//Arrow function
+const yearOfPublication = (publicationDatee) => publicationDatee.split('-')[0];
+console.log(yearOfPublication(book.publicationDate));
