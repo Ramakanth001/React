@@ -145,12 +145,14 @@ function getBook(id) {
 
 // const books = getBooks();
 const book = getBook(1);
+book;
 // const author = book.author;
 
-console.log(book);
+// console.log(book);
 
 // author;
 const {title, author, genres} = book;
+console.log(title);
 
 const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 genres;
@@ -160,4 +162,15 @@ const newGenres = [ 'joro', ...genres, 'comedy']
 // console.log(newGenres)
 
 const updatedBook = { ...book, moviePublicationDate: "2001-12-19", pages: 1210 };
-console.log(updatedBook);
+// console.log(updatedBook);
+
+const newBookWoo = {...book, review: 'Good',  hit: 'yes'};
+// console.log(newBookWoo)
+
+console.log(`I read a book named ${title}`)
+
+
+const pages = book.pages;
+
+const myReview = `I have recently read a book named ${title}. It is really good and it's primary genre is ${book.genres[0]}. It was published by ${book.author} in the year ${book.publicationDate.split('-')[0]}`;
+console.log(myReview);
