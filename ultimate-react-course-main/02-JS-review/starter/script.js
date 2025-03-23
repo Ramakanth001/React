@@ -174,3 +174,5 @@ const pages = book.pages;
 
 const myReview = `I have recently read a book named ${title}. It is really good and it's primary genre is ${book.genres[0]}. It was published by ${book.author} in the year ${book.publicationDate.split('-')[0]}`;
 console.log(myReview);
+
+book.pages > 1000 ? 'Greater than 1000' : "Less than or equal 1000";
