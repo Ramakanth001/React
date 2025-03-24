@@ -185,3 +185,22 @@ console.log(pageRange);
 //Arrow function
 const yearOfPublication = (publicationDatee) => publicationDatee.split('-')[0];
 console.log(yearOfPublication(book.publicationDate));
+
+// Short circuting and logical opetators
+// falsy: 0, '', null, undefined
+console.log("jonas" && "Some string" );
+console.log(0 && "Some string");
+console.log(true || "Some string");
+console.log(false || "Some string");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+spanishTranslation;
+
+// console.log(book.reviews.librarything.reviewsCount);
+// const countWrong = book.reviews.librarything.reviewsCount || "no data";
+// countWrong;
+
+// const count = book.reviews.librarything.reviewsCount ?? "no data";
+// count;
