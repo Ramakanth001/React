@@ -204,3 +204,38 @@ countWrong;
 
 const count = book.reviews.librarything.reviewsCount ?? "no data";
 count;
+
+// imported data from demoData file
+const myData = require('./demoData');
+// console.log(myData);
+
+function getMyBook(id) {
+  return myData.find((d) => d.id === id);
+}
+
+// console.log(myData.reviews.goodreads.reviewsCount);
+const myBook = getMyBook(4);
+console.log(myBook);
+
+function getTotalReviewsCount(myBook){
+  // const a = myBook.reviews.goodreads.reviewsCount;
+  // const b = myBook.reviews.librarything.reviewsCount;
+  // console.log(a,b);
+  return myBook.reviews.goodreads.reviewsCount + myBook.reviews.librarything.reviewsCount;
+}
+
+console.log(getTotalReviewsCount(myBook));
+
+// optinal chaining
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  librarything;
+  return goodreads + librarything;
+}
+
+const books = getBooks();
+console.log(books);
+console.log("Woo");
+console.log(getTotalReviewCount(myBook))
+
