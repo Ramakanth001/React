@@ -198,9 +198,9 @@ console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
 spanishTranslation;
 
-// console.log(book.reviews.librarything.reviewsCount);
-// const countWrong = book.reviews.librarything.reviewsCount || "no data";
-// countWrong;
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+countWrong;
 
-// const count = book.reviews.librarything.reviewsCount ?? "no data";
-// count;
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
